@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Automate-IT": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\nuk3-\\Downloads\\TypeText Das ist ein Test.ait\""
+    },
+    "Automate-IT Prod": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\nuk3-\\Downloads\\rbl_template.ait\""
+    }
+  }
+}
