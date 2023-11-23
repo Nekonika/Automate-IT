@@ -48,13 +48,13 @@ namespace Automate_IT
                 {
                     MouseInput = new MouseInput()
                     {
-                        X = /*mousePosition == MousePosition.Absolut ?*/ CalculateAbsoluteCoordinateX(x) /*: x*/,
-                        Y = /*mousePosition == MousePosition.Absolut ?*/ CalculateAbsoluteCoordinateY(y) /*: y*/,
-                        Flags = MouseInputFlags.MOUSEEVENTF_MOVE | /*mousePosition switch
+                        X = mousePosition == MousePosition.Absolut ? CalculateAbsoluteCoordinateX(x) : x,
+                        Y = mousePosition == MousePosition.Absolut ? CalculateAbsoluteCoordinateY(y) : y,
+                        Flags = MouseInputFlags.MOUSEEVENTF_MOVE | mousePosition switch
                         {
-                            MousePosition.Absolut =>*/ MouseInputFlags.MOUSEEVENTF_ABSOLUTE | MouseInputFlags.MOUSEEVENTF_VIRTUALDESK/*,
+                            MousePosition.Absolut => MouseInputFlags.MOUSEEVENTF_ABSOLUTE | MouseInputFlags.MOUSEEVENTF_VIRTUALDESK,
                             _ => MouseInputFlags.NONE
-                        }*/,
+                        },
                         ExtraInfo = GetMessageExtraInfo(),
                         MouseData = 0,
                     }
